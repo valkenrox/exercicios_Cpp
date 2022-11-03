@@ -1,0 +1,35 @@
+#include <iostream> 
+
+using namespace std; 
+
+int main() 
+
+{ 
+
+float tempomedio, minutos, velocidademedia, distancia, litrosusados; 
+
+cout <<"\nDigite o tempo da viagem em minutos: "; 
+
+cin >> minutos; 
+
+tempomedio = minutos / 60; 
+
+cout << "\nO tempo em hora é: " <<tempomedio<< " Horas"; 
+
+cout << "\nDigite a velocidade média em KM/h: "; 
+
+cin >> velocidademedia; 
+
+distancia = tempomedio * velocidademedia; 
+
+litrosusados = distancia / 12; 
+
+cout << "\nTempo gasto na viagem: " <<tempomedio<< " Horas"; 
+
+cout << "\nDistancia percorrida: " <<distancia<< " Quilometros"; 
+
+cout << "\nQuantidade de litros utilizados na viagem: " <<litrosusados<< " Litros"; 
+
+    return 0; 
+
+} 
