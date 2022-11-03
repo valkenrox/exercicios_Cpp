@@ -1,0 +1,99 @@
+#include <stdio.h>
+#include <iostream>
+#include <stdlib.h> //limpar tela
+
+
+#define pausa system ("pause")
+#define clear system ("cls")
+
+using namespace std;
+
+void menu();
+void jogo();
+
+int main()
+{
+   int opcao;
+   while(true)
+   {
+          menu();
+          cin>>opcao;
+       if (opcao==1){
+           clear;
+           jogo();
+       }
+   }
+
+return 0;
+}
+void menu (){
+    cout <<"\t\t\t\tJOGO ";
+    cout <<"DA ";
+    cout <<"FORCA ";
+    
+    cout << "\n\n\n\t\t\t\t1 - INICIAR"<<endl;
+    cout << "\t\t\t\t2 - REGRAS"<<endl;
+    cout << "\t\t\t\t3 - SAIR"<<endl<<endl;
+    cout << "OPÇÃO: ";
+    clear;
+    
+}
+void jogo (){ //logica do jogo
+    char nomeCarrasco[10], nomeVitima[10], carrasco[30], mesa[30], letra, vitima;
+    int chanceVitima = 0, auxChance;
+    
+
+    for(int i = 0; i<30;i++)
+    {
+        carrasco[i]= NULL;
+        mesa[i]= NULL;
+    }
+    fflush(stdin);
+    cout<< "Digite o nome do carrasco: ";
+    cin>>nomeCarrasco;
+    cout <<"Digite o nome da Vitima ";
+    cin>>nomeVitima;
+    clear;
+    cout<<"(Carrasco) "<< nomeCarrasco<< " Escreva a palavra secreta: ";
+    cin>>carrasco;
+    
+    for(int i=0;carrasco[i]!='\0'; i++)
+    {
+        if(carrasco[i]==' ')
+        {
+            mesa[i]= ' ';
+        }else
+        {
+           
+        mesa[i]=0;
+        }
+        clear;
+        while(1)
+        {
+            auxChance=0;
+            cout<<"LETRAS: "<<vitima<< endl;
+            
+            
+            cout<<"\t\t\t\t\t"<<mesa<< endl<<endl;
+            cout<< "Letra: ";
+            cin>> letra;
+            vitima = (vitima+letra);
+            
+            for(int i=0;carrasco[i]!='\0';i++);
+            if(letra==carrasco[i])
+            {
+                mesa[i] = letra;
+                auxChance++;
+            }
+        }
+        if(auxChance==0)
+        {
+            chanceVitima++;
+        }
+            
+    }
+    
+    
+    
+    
+}
