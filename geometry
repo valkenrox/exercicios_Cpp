@@ -1,0 +1,29 @@
+#include <iostream>
+#include <iomanip>
+#include <math.h>
+ 
+using namespace std;
+ //cout << fixed << setprecision(3);
+ 
+int main() {
+ 
+double a=0,b=0,c=0;
+cout << fixed << setprecision(1);
+cin>>a;
+cin>>b;
+cin>>c;
+cout << fixed << setprecision(3);
+double triangulo = (a*c)/2; 
+double circulo= (3.14159*c)*c; 
+double trapezio= (a+b)*c/2;
+double quadrado = b*b;
+double retangulo = a*b;
+
+cout<<"TRIANGULO: "<<setprecision(3)<<triangulo<<"\n";
+cout<<"CIRCULO: "<<setprecision(3)<<circulo<<"\n";
+cout<<"TRAPEZIO: "<<setprecision(3)<<trapezio<<"\n";
+cout<<"QUADRADO: "<<setprecision(3)<<quadrado<<"\n";
+cout<<"RETANGULO: "<<setprecision(3)<<retangulo<<endl;
+
+return 0;
+}
