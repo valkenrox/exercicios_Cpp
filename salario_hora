@@ -1,0 +1,20 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+ 
+int main() {
+ 
+int numFunc,numHora;
+double valorHora,salario;
+cin>>numFunc>>numHora>>valorHora;
+
+salario = valorHora * numHora;
+
+
+cout<<"NUMBER = "<<numFunc<<endl;
+cout<<fixed<<setprecision(2);
+cout<<"SALARY = U$ "<<setprecision(2)<<salario<<endl;
+
+ 
+    return 0;
+}
