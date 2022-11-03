@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int dia,mes,ano;
+    
+cin>>dia;
+
+if (dia>=365)
+{
+        
+    ano = dia /365;
+}
+else
+{
+    ano = 0;
+};
+        if(dia>=30)
+        {
+            mes = (dia- ano*365) /30;
+        }
+        else    
+        {
+            mes = 0;
+        };
+dia = (dia - ano *365) - (mes *30);
+
+cout<<ano<<" ano(s)";
+cout<<mes<<" mes(es)";
+cout<<dia<<" dia(s)"<<endl;
+
+return 0;
+                        
+                
+}
