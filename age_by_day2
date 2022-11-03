@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int idade_dias=0, ano, mes, dia;
+    
+    cin>>idade_dias;
+    
+    ano = idade_dias / 365;
+    mes = (idade_dias % 365) / 30;
+    dia = (idade_dias % 365) % 30;
+    
+    cout<<ano<<" ano(s)\n";
+    cout<<mes<<" mes(es)\n";
+    cout<<dia<<" dia(s)\n"<<endl;
+    
+    return 0;
+}
