@@ -1,0 +1,32 @@
+#include <stdlib.h>
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    char nome[10];
+    char sexo;
+    float nota1 = 0, nota2 = 0;
+    int idade =0, salario = 0, media = 0;
+    bool fezprova = false;
+
+    cout<<"Digite seu nome: ";
+    cin>> nome;
+    cout<<"Digite sua primeira nota :";
+    cin>>nota1;
+    cout<<"Digite sua segunda nota :";
+    cin>> nota2;
+    media = (nota1+nota2)/2;
+
+    if (media <7)
+    {
+        cout<<"Sua média foi " <<media<<", você está reprovado, " <<nome<< "!";
+
+    }
+    else {
+        cout<<"Sua média foi " <<media<< " Voce esta aprovado,  "<<nome<<"!";
+
+    }
+
+return 0;
+}
